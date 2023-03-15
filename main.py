@@ -6,9 +6,9 @@ import os
 
 # Load the environment variables from .env file
 load_dotenv()
-
+api_key = os.getenv('OPENAI_API_KEY')
 # Access the environment variable
-openai.api_key = os.getenv('OPENAI_API_KEY')
+openai.api_key = api_key
 
 # Create a completion function to generate text from GPT-3
 def generate_text(prompt):
